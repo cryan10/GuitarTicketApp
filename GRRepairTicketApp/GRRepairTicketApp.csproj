@@ -341,6 +341,7 @@
     <Content Include="Views\RepairTickets\Details.cshtml" />
     <Content Include="Views\RepairTickets\Edit.cshtml" />
     <Content Include="Views\RepairTickets\Index.cshtml" />
+    <Content Include="Views\Home\WelcomeCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
