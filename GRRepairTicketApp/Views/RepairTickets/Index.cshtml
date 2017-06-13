@@ -73,3 +73,19 @@
 }
 
 </table>
+@section Scripts{
+    <script>
+        $(document).ready(function ()
+        {
+            function myFunction() {
+                $.get("@Url.Action("AdminOrder","RepairTickets")", function (serverResponse) {
+                    var repairTickets = JSON.parse(serverResponse);
+                    console.log(jsonTest);
+
+                })
+            }
+        })
+
+  </script>
+
+}
