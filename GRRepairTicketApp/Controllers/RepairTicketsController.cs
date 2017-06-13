@@ -27,7 +27,7 @@ namespace GRRepairTicketApp.Controllers
                                 select RepairTicket;
 
 
-            return View(db.RepairTickets.ToList());
+            return View(repairTickets.ToList());
         }
 
         public JsonResult AdminOrder()
