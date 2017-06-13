@@ -79,15 +79,14 @@ namespace GRRepairTicketApp.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    if(model.Email == "admin1@gmail.com")
+                    if(model.Email == "Admin1@gmail.com")
                     {
-                        //Response.Redirect("google.co");
-                        return RedirectToAction("About", "Home");
+                        return RedirectToAction("WelcomeAdmin", "Home");
                     }
-                   return RedirectToAction("Contact", "Home");
-                    //We need to switch the RedirectToAction links to WelcomeCustomer page and WelcomeAdmin page.
-                    //Next step is to create the actionName needed. Do we do this in a controller?
-                    //Also, we need to redirect the newly registered user to these pages
+                   return RedirectToAction("WelcomeCustomer", "Home");
+                   
+                    
+                    
 
 
                 case SignInStatus.LockedOut:
@@ -173,8 +172,10 @@ namespace GRRepairTicketApp.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("WelcomeCustomer", "Home");
                 }
+
+
                 AddErrors(result);
             }
 

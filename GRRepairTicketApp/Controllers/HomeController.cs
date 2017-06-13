@@ -13,6 +13,17 @@ namespace GRRepairTicketApp.Controllers
             return View();
         }
 
+
+        public ActionResult WelcomeAdmin()
+        {
+            return View();
+        }
+
+        public ActionResult WelcomeCustomer()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
