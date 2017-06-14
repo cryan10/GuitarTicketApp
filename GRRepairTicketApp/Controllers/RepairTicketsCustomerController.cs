@@ -7,51 +7,29 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GRRepairTicketApp.Models;
-using Newtonsoft.Json;
 using Microsoft.AspNet.Identity;
 
 namespace GRRepairTicketApp.Controllers
 {
-    public class RepairTicketsController : Controller
+    public class RepairTicketsCustomerController : Controller
     {
         private RepairTicketDBEntities db = new RepairTicketDBEntities();
 
-        // GET: RepairTickets
+        // GET: RepairTicketsCustomer
         public ActionResult Index()
         {
+            //creating variable to hold current user's userID
+            var currentUser = User.Identity.GetUserId();
+            //LINQ query for selecting only current user's info
             var repairTickets = from RepairTicket in db.RepairTickets
-                                orderby
-                         RepairTicket.TimeStamp descending
+                                where RepairTicket.UserID == currentUser
                                 select RepairTicket;
+
 
             return View(repairTickets.ToList());
         }
 
-        public JsonResult AdminOrder()
-        {
-            /*This SQL query will sort repair tickets by time created newest to oldest and show user name for admin landing page
-            SELECT RepairTickets.RepairTicketID, AspNetUsers.UserName
-                         FROM RepairTickets
-                         INNER JOIN AspNetUsers ON RepairTickets.UserID = AspNetUsers.Id
-             ORDER BY RepairTickets.Timestamp Desc;*/
-
-
-            var repairTickets = from RepairTickets in db.RepairTickets
-                                orderby
-                                  RepairTickets.TimeStamp descending
-                                select new
-                                {
-                                    RepairTickets.RepairTicketID,
-                                    RepairTickets.UserID
-                                };
-
-            var output = JsonConvert.SerializeObject(repairTickets.ToList());
-            return Json(output, JsonRequestBehavior.AllowGet);
-        }
-    
-
-
-        // GET: RepairTickets/Details/5
+        // GET: RepairTicketsCustomer/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -66,13 +44,13 @@ namespace GRRepairTicketApp.Controllers
             return View(repairTicket);
         }
 
-        // GET: RepairTickets/Create
+        // GET: RepairTicketsCustomer/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: RepairTickets/Create
+        // POST: RepairTicketsCustomer/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -81,8 +59,6 @@ namespace GRRepairTicketApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                repairTicket.UserID = User.Identity.GetUserId();
-                repairTicket.TimeStamp = DateTime.Now;
                 db.RepairTickets.Add(repairTicket);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -91,7 +67,7 @@ namespace GRRepairTicketApp.Controllers
             return View(repairTicket);
         }
 
-        // GET: RepairTickets/Edit/5
+        // GET: RepairTicketsCustomer/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -106,7 +82,7 @@ namespace GRRepairTicketApp.Controllers
             return View(repairTicket);
         }
 
-        // POST: RepairTickets/Edit/5
+        // POST: RepairTicketsCustomer/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -122,7 +98,7 @@ namespace GRRepairTicketApp.Controllers
             return View(repairTicket);
         }
 
-        // GET: RepairTickets/Delete/5
+        // GET: RepairTicketsCustomer/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -137,7 +113,7 @@ namespace GRRepairTicketApp.Controllers
             return View(repairTicket);
         }
 
-        // POST: RepairTickets/Delete/5
+        // POST: RepairTicketsCustomer/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

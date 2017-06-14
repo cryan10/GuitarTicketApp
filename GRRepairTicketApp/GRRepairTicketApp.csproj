@@ -215,6 +215,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RepairTicketsController.cs" />
+    <Compile Include="Controllers\RepairTicketsCustomerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -343,6 +344,11 @@
     <Content Include="Views\RepairTickets\Index.cshtml" />
     <Content Include="Views\Home\WelcomeCustomer.cshtml" />
     <Content Include="Views\Home\WelcomeAdmin.cshtml" />
+    <Content Include="Views\RepairTicketsCustomer\Create.cshtml" />
+    <Content Include="Views\RepairTicketsCustomer\Delete.cshtml" />
+    <Content Include="Views\RepairTicketsCustomer\Details.cshtml" />
+    <Content Include="Views\RepairTicketsCustomer\Edit.cshtml" />
+    <Content Include="Views\RepairTicketsCustomer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
