@@ -24,8 +24,14 @@ namespace GRRepairTicketApp.Controllers
 
         public ActionResult WelcomeAdmin()
         {
-            return View();
+            var repairTickets = from RepairTicket in db.RepairTickets
+                                orderby
+                         RepairTicket.TimeStamp descending
+                                select RepairTicket;
+                                
+            return View(repairTickets.ToList());
         }
+
 
         // GET: RepairTickets
 
