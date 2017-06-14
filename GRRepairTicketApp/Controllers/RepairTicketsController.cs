@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GRRepairTicketApp.Models;
+using Newtonsoft.Json;
 using Microsoft.AspNet.Identity;
 
 namespace GRRepairTicketApp.Controllers
@@ -26,8 +27,32 @@ namespace GRRepairTicketApp.Controllers
                                 select RepairTicket;
 
 
-            return View(db.RepairTickets.ToList());
+            return View(repairTickets.ToList());
         }
+
+        public JsonResult AdminOrder()
+        {
+            /*This SQL query will sort repair tickets by time created newest to oldest and show user name for admin landing page
+            SELECT RepairTickets.RepairTicketID, AspNetUsers.UserName
+                         FROM RepairTickets
+                         INNER JOIN AspNetUsers ON RepairTickets.UserID = AspNetUsers.Id
+             ORDER BY RepairTickets.Timestamp Desc;*/
+
+
+            var repairTickets = from RepairTickets in db.RepairTickets
+                                orderby
+                                  RepairTickets.TimeStamp descending
+                                select new
+                                {
+                                    RepairTickets.RepairTicketID,
+                                    RepairTickets.UserID
+                                };
+
+            var output = JsonConvert.SerializeObject(repairTickets.ToList());
+            return Json(output, JsonRequestBehavior.AllowGet);
+        }
+    
+
 
         // GET: RepairTickets/Details/5
         public ActionResult Details(int? id)
