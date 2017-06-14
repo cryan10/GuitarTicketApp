@@ -72,14 +72,16 @@ h6 {
     }
 
     ul.intro-social-buttons > li {
-        display:
+        display:block;
         margin-bottom: 5px;
         padding: 0;
+        background-color:#0026ff;
         
     }
 
     ul.intro-social-buttons > li:last-child {
         margin-bottom: 0;
+        background-color:#ff0000;
     }
 
     .intro-divider {
