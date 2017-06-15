@@ -22,31 +22,7 @@ namespace GRRepairTicketApp.Controllers
         }
 
 
-        public ActionResult WelcomeAdmin()
-        {
-            var repairTickets = from RepairTicket in db.RepairTickets
-                                orderby
-                         RepairTicket.TimeStamp descending
-                                select RepairTicket;
-                                
-            return View(repairTickets.ToList());
-        }
-
-
-        // GET: RepairTickets
-
-        public ActionResult WelcomeCustomer()
-        {
-            //creating variable to hold current user's userID
-            var currentUser = User.Identity.GetUserId();
-            //LINQ query for selecting only current user's info
-            var repairTickets = from RepairTicket in db.RepairTickets
-                                where RepairTicket.UserID == currentUser
-                                select RepairTicket;
-
-
-            return View(repairTickets.ToList());
-        }
+       
 
         public ActionResult About()
         {
