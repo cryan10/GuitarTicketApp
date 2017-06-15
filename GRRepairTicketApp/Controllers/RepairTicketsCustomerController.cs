@@ -13,7 +13,7 @@ namespace GRRepairTicketApp.Controllers
 {
     public class RepairTicketsCustomerController : Controller
     {
-        private RepairTicketDBEntities db = new RepairTicketDBEntities();
+        private RepairTicketDBEntities1 db = new RepairTicketDBEntities1();
 
         // GET: RepairTicketsCustomer
         public ActionResult Index()

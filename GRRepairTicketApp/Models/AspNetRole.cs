@@ -12,27 +12,18 @@ namespace GRRepairTicketApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class RepairTicket
+    public partial class AspNetRole
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RepairTicket()
+        public AspNetRole()
         {
-            this.Comments = new HashSet<Comment>();
+            this.AspNetUsers = new HashSet<AspNetUser>();
         }
     
-        public int RepairTicketID { get; set; }
-        public string UserID { get; set; }
-        public string ModelName { get; set; }
-        public string SerialNumber { get; set; }
-        public string Brand { get; set; }
-        public string ProblemDescription { get; set; }
-        public Nullable<bool> EquipmentType { get; set; }
-        public Nullable<System.DateTime> TimeStamp { get; set; }
-        public Nullable<bool> Status { get; set; }
-        public string Equipment { get; set; }
-        public string Progress { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
     }
 }
