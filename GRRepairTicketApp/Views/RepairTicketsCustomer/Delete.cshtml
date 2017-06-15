@@ -1,8 +1,5 @@
 ﻿@model GRRepairTicketApp.Models.RepairTicket
 
-@{
-    ViewBag.Title = "Delete";
-}
 
 <h2>Delete</h2>
 
@@ -11,12 +8,21 @@
     <h4>RepairTicket</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
-            @Html.DisplayNameFor(model => model.UserID)
+            @Html.DisplayNameFor(model => model.Equipment)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.UserID)
+            @Html.DisplayFor(model => model.Equipment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
         </dd>
 
         <dt>
@@ -36,27 +42,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Brand)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Brand)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.ProblemDescription)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ProblemDescription)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EquipmentType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EquipmentType)
         </dd>
 
         <dt>
@@ -68,11 +58,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Status)
+            @Html.DisplayNameFor(model => model.Progress)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Status)
+            @Html.DisplayFor(model => model.Progress)
         </dd>
 
     </dl>
@@ -82,7 +72,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to Repair Ticket List", "Index")
         </div>
     }
 </div>

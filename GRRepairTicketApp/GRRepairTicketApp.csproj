@@ -220,7 +220,22 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>RepairTicket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>RepairTicket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>RepairTicket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>RepairTicket.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Comment.cs">
+      <DependentUpon>RepairTicket.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>RepairTicket.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
@@ -342,8 +357,6 @@
     <Content Include="Views\RepairTickets\Details.cshtml" />
     <Content Include="Views\RepairTickets\Edit.cshtml" />
     <Content Include="Views\RepairTickets\Index.cshtml" />
-    <Content Include="Views\Home\WelcomeCustomer.cshtml" />
-    <Content Include="Views\Home\WelcomeAdmin.cshtml" />
     <Content Include="Views\RepairTicketsCustomer\Create.cshtml" />
     <Content Include="Views\RepairTicketsCustomer\Delete.cshtml" />
     <Content Include="Views\RepairTicketsCustomer\Details.cshtml" />
