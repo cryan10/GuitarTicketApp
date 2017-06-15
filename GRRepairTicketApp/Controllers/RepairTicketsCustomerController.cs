@@ -25,7 +25,6 @@ namespace GRRepairTicketApp.Controllers
                                 where RepairTicket.UserID == currentUser
                                 select RepairTicket;
 
-
             return View(repairTickets.ToList());
         }
 
@@ -55,10 +54,12 @@ namespace GRRepairTicketApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RepairTicketID,UserID,ModelName,SerialNumber,Brand,ProblemDescription,EquipmentType,TimeStamp,Status")] RepairTicket repairTicket)
+        public ActionResult Create([Bind(Include = "RepairTicketID,UserID,ModelName,SerialNumber,Brand,ProblemDescription,Equipment,TimeStamp,Progress")] RepairTicket repairTicket)
         {
             if (ModelState.IsValid)
             {
+                repairTicket.UserID = User.Identity.GetUserId();
+                repairTicket.TimeStamp = DateTime.Now;
                 db.RepairTickets.Add(repairTicket);
                 db.SaveChanges();
                 return RedirectToAction("Index");

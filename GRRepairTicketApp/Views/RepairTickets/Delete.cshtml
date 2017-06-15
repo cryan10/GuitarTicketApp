@@ -1,14 +1,11 @@
 ﻿@model GRRepairTicketApp.Models.RepairTicket
 
-@{
-    ViewBag.Title = "Delete";
-}
 
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>RepairTicket</h4>
+    <h4>Repair Ticket</h4>
     <hr />
     <dl class="dl-horizontal">
 
@@ -73,7 +70,6 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        //This needs to be updated!
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to Repair Ticket List", "Index")

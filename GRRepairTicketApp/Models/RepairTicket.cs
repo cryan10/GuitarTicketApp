@@ -11,7 +11,8 @@ namespace GRRepairTicketApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class RepairTicket
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,14 +23,20 @@ namespace GRRepairTicketApp.Models
     
         public int RepairTicketID { get; set; }
         public string UserID { get; set; }
+        [Display(Name = "Model:")]
         public string ModelName { get; set; }
+        [Display(Name = "Serial Number:")]
         public string SerialNumber { get; set; }
+        [Display(Name = "Brand:")]
         public string Brand { get; set; }
+        [Display(Name = "Describe your problem:")]
         public string ProblemDescription { get; set; }
         public Nullable<bool> EquipmentType { get; set; }
         public Nullable<System.DateTime> TimeStamp { get; set; }
         public Nullable<bool> Status { get; set; }
+        [Display(Name = "Guitar or Amp:")]
         public string Equipment { get; set; }
+        [Display(Name = "Notes:")]
         public string Progress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
