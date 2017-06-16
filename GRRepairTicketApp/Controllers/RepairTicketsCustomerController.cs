@@ -25,7 +25,6 @@ namespace GRRepairTicketApp.Controllers
                                 where RepairTicket.UserID == currentUser
                                 select RepairTicket;
 
-
             return View(repairTickets.ToList());
         }
 
