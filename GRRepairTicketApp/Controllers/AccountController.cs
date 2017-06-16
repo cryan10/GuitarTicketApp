@@ -81,9 +81,9 @@ namespace GRRepairTicketApp.Controllers
                 case SignInStatus.Success:
                     if(model.Email == "gr.repair216@gmail.com")
                     {
-                        return RedirectToAction("About", "Home");
+                        return RedirectToAction("Index", "RepairTickets");
                     }
-                   return RedirectToAction("Contact", "Home");
+                   return RedirectToAction("Index", "RepairTicketsCustomer");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -167,7 +167,7 @@ namespace GRRepairTicketApp.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Contact", "Home");
+                    return RedirectToAction("Index", "RepairTicketsCustomer");
                 }
 
 
