@@ -275,6 +275,9 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\banner-bg.jpg" />
     <Content Include="Content\img\dog.png" />
+    <Content Include="Content\img\GuitarRiotInStore.jpg" />
+    <Content Include="Content\img\GuitarRiotOwners.jpg" />
+    <Content Include="Content\img\GuitarRiotStock.jpg" />
     <Content Include="Content\img\intro-bg.jpg" />
     <Content Include="Content\img\ipad.png" />
     <Content Include="Content\img\phones.png" />
