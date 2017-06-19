@@ -13,11 +13,14 @@
     <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Oswald|Special+Elite" rel="stylesheet">
 </head>
-@{
-    ViewBag.Title = "Login Failure";
-}
 
-<hgroup>
-    <h2>@ViewBag.Title.</h2>
-    <h3 class="text-danger">Unsuccessful login with service.</h3>
-</hgroup>
+<div id="pageHeader">
+    @{
+        ViewBag.Title = "Login Failure";
+    }
+</div>
+
+    <hgroup>
+        <h2>@ViewBag.Title.</h2>
+        <h3 class="text-danger">Unsuccessful login with service.</h3>
+    </hgroup>
