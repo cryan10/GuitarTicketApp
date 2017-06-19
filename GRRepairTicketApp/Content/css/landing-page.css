@@ -40,15 +40,19 @@ p{
     font-size: 14px; 
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
-
+    background-color:black; 
 }
+
 
 .lead {
     font-size: 18px;
     font-weight: 400;
+    color:black;
 }
 
+
 #RepairTicketNavBarLogo{
+    color:white;
     font-family: 'Special Elite', cursive;
     font-size: 16px;
     letter-spacing:0.5px;
@@ -88,6 +92,25 @@ p{
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
+#loginButton{
+    background-color:white;
+    color:black;
+}
+
+#registerButton{
+    background-color: transparent;
+    color:white;
+}
+
+#registerButton:hover{
+background-color:rgba(255, 0, 0, 0.76);
+}
+
+#loginButton:hover{
+color:white;
+background-color:rgba(255, 0, 0, 0.76);
+}
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -121,7 +144,7 @@ p{
 
 .content-section-a {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 .content-section-b {
@@ -132,64 +155,19 @@ p{
 
 .section-heading {
     margin-bottom: 30px;
+    color: red;
+    font-family: 'Special Elite', cursive;
 }
 
 .section-heading-spacer {
     float: left;
     width: 200px;
-    border-top: 3px solid #e7e7e7;
-}
-
-.banner {
-    padding: 100px 0;
-    color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
-}
-
-.banner ul {
-    margin-bottom: 0;
-}
-
-.banner-social-buttons {
-    float: right;
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+    border-top: 3px solid black;
 }
 
 footer {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 p.copyright {

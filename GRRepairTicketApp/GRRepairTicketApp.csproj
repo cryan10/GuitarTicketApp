@@ -273,14 +273,9 @@
     <Content Include="Content\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\img\banner-bg.jpg" />
-    <Content Include="Content\img\dog.png" />
     <Content Include="Content\img\GuitarRiotInStore.jpg" />
     <Content Include="Content\img\GuitarRiotOwners.jpg" />
     <Content Include="Content\img\GuitarRiotStock.jpg" />
-    <Content Include="Content\img\intro-bg.jpg" />
-    <Content Include="Content\img\ipad.png" />
-    <Content Include="Content\img\phones.png" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.js" />
@@ -368,7 +363,6 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Home\index1.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
