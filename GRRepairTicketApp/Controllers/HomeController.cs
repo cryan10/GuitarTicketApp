@@ -21,7 +21,12 @@ namespace GRRepairTicketApp.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult FAQ()
+        {
+            return View();
+        }
+
+        public ActionResult OurTeam()
         {
             return View();
         }
