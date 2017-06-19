@@ -1,18 +1,18 @@
-﻿@{
-    ViewBag.Title = "Contact Us";
-}
-<h2>Contact Us</h2>
-<h4>Have a question regarding your repair? Fill out the form below and we will get back to you as soon as we can.</h4>
+﻿<div id="pageHeader">
+    <h2>Contact Us</h2>
+</div>
 
-<form action="https://formspree.io/gr.repair216@gmail.com"
-      method="POST">
-    <h5>Your Name:</h5>
-    <input type="text" name="name">
-    <br />
-    <h5>Your Email:</h5>
-    <input type="email" name="_replyto">
-    <h5>Your Message:</h5>
-    <input type="text" name="Comments" />
-    <br />
-    <input type="submit" value="Send">
-</form>
+    <h4>Have a question regarding your repair? Fill out the form below and we will get back to you as soon as we can.</h4>
+
+    <form action="https://formspree.io/gr.repair216@gmail.com"
+          method="POST">
+        <h5>Your Name:</h5>
+        <input type="text" name="Customer's Name">
+        <br />
+        <h5>Your Email:</h5>
+        <input type="email" name="Email">
+        <h5>Your Message:</h5>
+        <input type="text" name="Message" />
+        <br />
+        <input type="submit" value="Send">
+    </form>

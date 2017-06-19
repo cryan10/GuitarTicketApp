@@ -14,13 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Oswald|Special+Elite" rel="stylesheet">
 </head>
 
-@{
-    ViewBag.Title = "Confirm Email";
-}
-
-<h2>@ViewBag.Title.</h2>
-<div>
-    <p>
-        Thank you for confirming your email. Please @Html.ActionLink("Click here to Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
-    </p>
+<div id="pageHeader">
+    <h1>Email Confirmation</h1>
 </div>
+    <div>
+        <p>
+            Thank you for confirming your email. Please @Html.ActionLink("Click here to Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+        </p>
+    </div>
