@@ -36,6 +36,7 @@ p{
     font-weight: 700;
 }*/
 
+
 .topnav {
     font-size: 14px; 
     font-family: 'Oswald', sans-serif;
@@ -60,6 +61,11 @@ p{
 
 #pageHeader{
     padding-top: 50px;
+}
+
+.navbar hover{
+    text-decoration:underline;
+    color:white;
 }
 
 .intro-header {
