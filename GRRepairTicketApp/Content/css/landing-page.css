@@ -180,6 +180,18 @@ footer {
     background-color: white;
 }
 
+.fa-fw{
+    color:red;
+}
+
+.fa-fw{
+    color:red;
+}
+
+.fa-fw:hover{
+    color:black;
+}
+
 p.copyright {
     margin: 15px 0 0;
 }
