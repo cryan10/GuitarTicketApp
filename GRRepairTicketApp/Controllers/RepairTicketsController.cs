@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Microsoft.AspNet.Identity;
 
 namespace GRRepairTicketApp.Controllers
-{
+{   [Authorize]
     public class RepairTicketsController : Controller
     {
         private RepairTicketDBEntities1 db = new RepairTicketDBEntities1();

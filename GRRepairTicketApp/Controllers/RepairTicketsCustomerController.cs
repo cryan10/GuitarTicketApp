@@ -10,7 +10,7 @@ using GRRepairTicketApp.Models;
 using Microsoft.AspNet.Identity;
 
 namespace GRRepairTicketApp.Controllers
-{
+{   [Authorize]
     public class RepairTicketsCustomerController : Controller
     {
         private RepairTicketDBEntities1 db = new RepairTicketDBEntities1();
