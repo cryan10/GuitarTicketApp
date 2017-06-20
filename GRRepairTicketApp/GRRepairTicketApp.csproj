@@ -274,6 +274,7 @@
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\brent.jpg" />
+    <Content Include="Content\img\carrie400x400.png" />
     <Content Include="Content\img\evonte.png" />
     <Content Include="Content\img\GRpic.jpg" />
     <Content Include="Content\img\GRStaff.jpg" />
