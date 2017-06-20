@@ -59,25 +59,25 @@
             @Html.DisplayFor(modelItem => item.UserID)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Equipment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.ModelName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SerialNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.ProblemDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EquipmentType)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TimeStamp)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Status)
+            @Html.DisplayFor(modelItem => item.Progress)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RepairTicketID }) |

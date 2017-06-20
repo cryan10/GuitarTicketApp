@@ -36,6 +36,7 @@ p{
     font-weight: 700;
 }*/
 
+
 .topnav {
     font-size: 14px; 
     font-family: 'Oswald', sans-serif;
@@ -60,6 +61,11 @@ p{
 
 #pageHeader{
     padding-top: 50px;
+}
+
+.navbar hover{
+    text-decoration:underline;
+    color:white;
 }
 
 .intro-header {
@@ -172,6 +178,18 @@ background-color:rgba(255, 0, 0, 0.76);
 footer {
     padding: 50px 0;
     background-color: white;
+}
+
+.fa-fw{
+    color:red;
+}
+
+.fa-fw{
+    color:red;
+}
+
+.fa-fw:hover{
+    color:black;
 }
 
 p.copyright {
