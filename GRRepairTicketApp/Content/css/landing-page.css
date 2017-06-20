@@ -190,6 +190,15 @@ background-color:rgba(255, 0, 0, 0.76);
     border-top: 3px solid black;
 }
 
+#textbox{
+    width:600px;
+    height:300px;
+}
+
+#inputBox{
+width:180px;
+}
+
 #FAQQuestion{
     color:red;
     font-size:16px;
