@@ -23,6 +23,7 @@ namespace GRRepairTicketApp.Controllers
             //LINQ query for selecting only current user's info
             var repairTickets = from RepairTicket in db.RepairTickets
                                 where RepairTicket.UserID == currentUser
+                                orderby RepairTicket.TimeStamp descending
                                 select RepairTicket;
 
             return View(repairTickets.ToList());
