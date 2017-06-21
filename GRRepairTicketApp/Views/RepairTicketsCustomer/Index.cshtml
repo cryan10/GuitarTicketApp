@@ -32,7 +32,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.ModelName)
                 </th>
-                <th>
+                @*<th>
                     @Html.DisplayNameFor(model => model.SerialNumber)
                 </th>
                 <th>
@@ -43,7 +43,7 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Progress)
-                </th>
+                </th>*@
                 <th></th>
             </tr>
 
@@ -59,7 +59,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.ModelName)
                     </td>
-                    <td>
+                    @*<td>
                         @Html.DisplayFor(modelItem => item.SerialNumber)
                     </td>
                     <td>
@@ -70,7 +70,7 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Progress)
-                    </td>
+                    </td>*@
                     <td>
                         @Html.ActionLink("Print My Repair Ticket", "Details", new { id = item.RepairTicketID })
                     </td>
