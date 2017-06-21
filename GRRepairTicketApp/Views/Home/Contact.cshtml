@@ -1,18 +1,48 @@
-﻿<div id="pageHeader">
-    <h2>Contact Us</h2>
-</div>
+﻿
 
-    <h4>Have a question regarding your repair? Fill out the form below and we will get back to you as soon as we can.</h4>
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Repair Ticket</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/css/landing-page.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Oswald|Special+Elite" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="pageHeader">
+        <h2>Contact Us</h2>
+    </div>
+
+    <h4>Have a question regarding your repair? Have a question about the process?</h4>
+    <h4> Fill out the form below and we will get back to you as soon as we can.</h4>
+    <br />
     <form action="https://formspree.io/gr.repair216@gmail.com"
           method="POST">
-        <h5>Your Name:</h5>
-        <input type="text" name="Customer's Name">
+        <h4>Your Name:</h4>
+        <input type="text" id="inputBox" name="Customer's Name">
         <br />
-        <h5>Your Email:</h5>
-        <input type="email" name="Email">
-        <h5>Your Message:</h5>
-        <input type="text" name="Message" />
+        <h4>Your Email:</h4>
+        <input type="email" id="inputBox" name="Customer's Email">
+        <div>
+            <br />
+            <h4>Your Message:</h4>
+            <input type="text" id="textbox" name="Message">
+        </div>
         <br />
-        <input type="submit" value="Send">
+        <input type="submit" class="btn btn-default" value="Send" id="submitButton">
     </form>
+
+</body>
+</html>
