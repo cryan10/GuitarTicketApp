@@ -51,21 +51,39 @@ p{
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
     background-color:black; 
-}
 
+
+}
+.navbar-header a:hover{
+    
+    color:white;
+}
 
 .lead {
     font-size: 18px;
     font-weight: 400;
     color:black;
 }
-
-
-#RepairTicketNavBarLogo{
-    color:white;
-    font-family: 'Special Elite', cursive;
-    font-size: 16px;
+/*LL*/
+.navbar.navbar-default {
+  
+     font-family: 'Special Elite', cursive;
+    font-size: 35px;
     letter-spacing:0.5px;
+}
+.navbar.navbar-default a:hover{
+    color:white;
+}
+
+
+.navbar-default .navbar-nav>li>a:hover{
+    color:white;
+}
+
+#RepairTicketNavBarLogo {
+    font-family: 'Special Elite', cursive;
+    font-size: 27px;
+    color:white;
 }
 
 #pageHeader{
@@ -73,10 +91,7 @@ p{
     padding-bottom:10px;
 }
 
-.navbar hover{
-    text-decoration:underline;
-    color:white;
-}
+
 
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */

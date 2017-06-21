@@ -20,10 +20,10 @@
     <h2>Create a Repair Ticket</h2>
 </div>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Repair Ticket</h4>
         <hr />
@@ -32,7 +32,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Equipment, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Equipment, new { htmlAttributes = new { @class = "form-control" } })
+
+                    @Html.EditorFor(model => model.Equipment, new { htmlAttributes = new { @class = "form-control", @required="required" } })
+
                     @Html.ValidationMessageFor(model => model.Equipment, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -40,7 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -48,7 +50,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ModelName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ModelName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.ModelName, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.ModelName, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -56,7 +58,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SerialNumber, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.SerialNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.SerialNumber, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.SerialNumber, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -64,7 +66,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProblemDescription, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ProblemDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.ProblemDescription, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.ProblemDescription, "", new { @class = "text-danger" })
             </div>
         </div>
