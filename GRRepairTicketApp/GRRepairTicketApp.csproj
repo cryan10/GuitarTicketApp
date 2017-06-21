@@ -273,16 +273,11 @@
     <Content Include="Content\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\img\brent.jpg" />
-    <Content Include="Content\img\evonte.png" />
     <Content Include="Content\img\GRpic.jpg" />
     <Content Include="Content\img\GRStaff.jpg" />
     <Content Include="Content\img\GuitarRiotInStore.jpg" />
     <Content Include="Content\img\GuitarRiotOwners.jpg" />
     <Content Include="Content\img\GuitarRiotStock.jpg" />
-    <Content Include="Content\img\iris.jpg" />
-    <Content Include="Content\img\lindsay.jpg" />
-    <Content Include="Content\img\rsz_11carriee.jpg" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.js" />
