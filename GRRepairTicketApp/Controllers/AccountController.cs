@@ -79,7 +79,7 @@ namespace GRRepairTicketApp.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    if(model.Email == "gr.repair216@gmail.com")
+                    if(model.Email == "jim@gmail.com")
                     {
                         return RedirectToAction("Index", "RepairTickets");
                     }
