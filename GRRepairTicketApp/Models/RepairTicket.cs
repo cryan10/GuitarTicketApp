@@ -27,7 +27,7 @@ namespace GRRepairTicketApp.Models
         //LL CHANGED THIS
         public string UserFirstName { get; set; }
         public string UserLastName { get; set; }
-        public string UserEmail { get; set; }
+        public string CustomerEmail { get; set; }
 
         [DisplayName("Model Name")]
         public string ModelName { get; set; }

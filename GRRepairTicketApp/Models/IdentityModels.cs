@@ -19,7 +19,7 @@ namespace GRRepairTicketApp.Models
         //LL CHANGED THIS
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
+        public string CustomerEmail { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

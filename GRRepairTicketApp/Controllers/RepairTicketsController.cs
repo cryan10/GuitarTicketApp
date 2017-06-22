@@ -32,7 +32,7 @@ namespace GRRepairTicketApp.Controllers
                              Id = user.Id,
                              FirstName = user.FirstName,
                              LastName = user.LastName,
-                             Email = user.Email
+                             CustomerEmail = user.Email
 
 
                          }).ToList();
@@ -42,7 +42,7 @@ namespace GRRepairTicketApp.Controllers
 
                 ticket.UserFirstName = users.Where(u => u.Id == ticket.UserID).Select(u => u.FirstName).FirstOrDefault();
                 ticket.UserLastName = users.Where(u => u.Id == ticket.UserID).Select(u => u.LastName).FirstOrDefault();
-                ticket.UserEmail = users.Where(u => u.Id == ticket.UserID).Select(u => u.Email).FirstOrDefault();
+                ticket.CustomerEmail = users.Where(u => u.Id == ticket.UserID).Select(u => u.CustomerEmail).FirstOrDefault();
             }
             return View(tix);
         }
