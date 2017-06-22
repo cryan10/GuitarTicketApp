@@ -20,7 +20,7 @@ namespace GRRepairTicketApp.Models
         {
             this.Comments = new HashSet<Comment>();
         }
-    
+        [Display(Name = "Repair Ticket ID:")]
         public int RepairTicketID { get; set; }
         public string UserID { get; set; }
         [Display(Name = "Model:")]
