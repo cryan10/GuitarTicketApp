@@ -18,25 +18,50 @@ namespace GRRepairTicketApp.Controllers
 
         // GET: RepairTickets
         public ActionResult Index()
+
         {
-            var repairTickets = from RepairTicket in db.RepairTickets
+            //LL CHANGED THIS
+            var tix = (from RepairTicket in db.RepairTickets
+                       orderby RepairTicket.TimeStamp descending
+                       select RepairTicket).ToList();
+
+            var users = (from User in db.AspNetUsers
+                         select new ApplicationUser
+                         {
+                             Id = User.Id,
+                             FirstName = User.FirstName,
+                             LastName = User.LastName,
+                             Email = User.Email
+
+
+                         }).ToList();
+
+            foreach (var ticket in tix) {
+
+                ticket.UserFirstName = users.Where(users => users.Id == ticket.UserID).Select(u => u.FirstName).FirstOrDefault();
+                ticket.UserLastName = users.Where(users => users.Id == ticket.UserID).Select(u => u.LastName).FirstOrDefault();
+                ticket.UserEmail = users.Where(users => users.Id == ticket.UserID).Select(u => u.Email).FirstOrDefault();
+            }
+            return View(tix); }
+
+           /* var repairTickets = from RepairTicket in db.RepairTickets
                                 orderby
                          RepairTicket.TimeStamp descending
                                 select RepairTicket;
 
-            return View(repairTickets.ToList());
+            return View(repairTickets.ToList()); */
         }
 
         public JsonResult AdminOrder()
         {
-            /*This SQL query will sort repair tickets by time created newest to oldest and show user name for admin landing page
-            SELECT RepairTickets.RepairTicketID, AspNetUsers.UserName
-                         FROM RepairTickets
-                         INNER JOIN AspNetUsers ON RepairTickets.UserID = AspNetUsers.Id
-             ORDER BY RepairTickets.Timestamp Desc;*/
+        /*This SQL query will sort repair tickets by time created newest to oldest and show user name for admin landing page
+        SELECT RepairTickets.RepairTicketID, AspNetUsers.UserName
+                     FROM RepairTickets
+                     INNER JOIN AspNetUsers ON RepairTickets.UserID = AspNetUsers.Id
+         ORDER BY RepairTickets.Timestamp Desc;*/
 
 
-            var repairTickets = from RepairTickets in db.RepairTickets
+        var repairTickets = from RepairTickets in db.RepairTickets
                                 orderby
                                   RepairTickets.TimeStamp descending
                                 select new
@@ -157,4 +182,4 @@ namespace GRRepairTicketApp.Controllers
             base.Dispose(disposing);
         }
     }
-}
+
