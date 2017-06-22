@@ -77,7 +77,7 @@ namespace GRRepairTicketApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RepairTicketID,UserID,ModelName,SerialNumber,Brand,ProblemDescription,EquipmentType,TimeStamp,Status")] RepairTicket repairTicket)
+        public ActionResult Create([Bind(Include = "RepairTicketID,UserID,ModelName,SerialNumber,Brand,ProblemDescription,Equipment,TimeStamp,Progress")] RepairTicket repairTicket)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +111,7 @@ namespace GRRepairTicketApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RepairTicketID,UserID,ModelName,SerialNumber,Brand,ProblemDescription,EquipmentType,TimeStamp,Status")] RepairTicket repairTicket)
+        public ActionResult Edit([Bind(Include = "RepairTicketID,UserID,ModelName,SerialNumber,Brand,ProblemDescription,Equipment,TimeStamp,Progress")] RepairTicket repairTicket)
         {
             if (ModelState.IsValid)
             {
