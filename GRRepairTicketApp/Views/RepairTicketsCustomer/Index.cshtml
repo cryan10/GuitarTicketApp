@@ -19,13 +19,14 @@
     <h2>My Repair Tickets</h2>
 </div>
         <p>
-            @Html.ActionLink("Create New Repair", "Create")
+            <input type="button" class="btn btn-default" id="submitbutton" value="Create New Repair" onclick="location.href='@Url.Action("Create")'"/> 
         </p>
         <table class="table">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Equipment)
-                </th>
+
+                                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Brand)
                 </th>
