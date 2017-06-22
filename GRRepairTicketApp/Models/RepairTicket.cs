@@ -11,7 +11,7 @@ namespace GRRepairTicketApp.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
 
     public partial class RepairTicket
     {
@@ -20,33 +20,28 @@ namespace GRRepairTicketApp.Models
         {
             this.Comments = new HashSet<Comment>();
         }
-
-        
-
-
-
-        [Display(Name = "Repair Ticket ID:")]
+    
         public int RepairTicketID { get; set; }
         public string UserID { get; set; }
+
         //LL CHANGED THIS
         public string UserFirstName { get; set; }
         public string UserLastName { get; set; }
         public string UserEmail { get; set; }
 
-        [Display(Name = "Model:")]
+        [DisplayName("Model Name")]
         public string ModelName { get; set; }
-        [Display(Name = "Serial Number:")]
+
+        [DisplayName("Serial Number")]
         public string SerialNumber { get; set; }
-        [Display(Name = "Brand:")]
         public string Brand { get; set; }
-        [Display(Name = "Describe your problem:")]
+
+        [DisplayName("Problem Description")]
         public string ProblemDescription { get; set; }
         public Nullable<bool> EquipmentType { get; set; }
         public Nullable<System.DateTime> TimeStamp { get; set; }
         public Nullable<bool> Status { get; set; }
-        [Display(Name = "Guitar or Amp:")]
         public string Equipment { get; set; }
-        [Display(Name = "Notes:")]
         public string Progress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
