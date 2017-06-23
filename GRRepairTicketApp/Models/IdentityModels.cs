@@ -16,10 +16,10 @@ namespace GRRepairTicketApp.Models
             // Add custom user claims here
             return userIdentity;
         }
-        //LL CHANGED THIS
+        //LL took out public string Email
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
+        
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
