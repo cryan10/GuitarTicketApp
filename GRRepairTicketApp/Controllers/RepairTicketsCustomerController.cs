@@ -36,12 +36,13 @@ namespace GRRepairTicketApp.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             RepairTicket repairTicket = db.RepairTickets.Find(id);
-            if (repairTicket == null)
-            {
-                return HttpNotFound();
-            }
-            return View(repairTicket);
+
+            var ticketUser = (from user in db.AspNetUsers
+                              where user.Id == repairTicket.UserID
+                              select new ApplicationUser { Id = user.Id, FirstName = user.FirstName, LastName = user.LastName, Email = user.Email }).FirstOrDefault(); if (repairTicket == null || ticketUser == null) { return HttpNotFound(); }
+            repairTicket.UserFirstName = ticketUser.FirstName; repairTicket.UserLastName = ticketUser.LastName; repairTicket.CustomerEmail = ticketUser.Email; return View(repairTicket);
         }
 
         // GET: RepairTicketsCustomer/Create
