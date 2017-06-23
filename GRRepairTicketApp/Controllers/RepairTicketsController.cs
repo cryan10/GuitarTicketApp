@@ -32,7 +32,7 @@ namespace GRRepairTicketApp.Controllers
                              Id = user.Id,
                              FirstName = user.FirstName,
                              LastName = user.LastName,
-                            
+                            Email=user.Email
 
 
                          }).ToList();
